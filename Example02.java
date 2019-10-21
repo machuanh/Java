@@ -1,16 +1,16 @@
-class Animal {		
-void shout() {			  
-System.out.println("动物发出叫声");
+public class Example02 {
+public static void main(String[] args) {
+MyThread myThread = new MyThread(); 
+myThread.start();              
+while (true) {                          
+System.out.println("main()方法在运行");
 }
 }
-class Dog extends Animal {    
-void shout() {			 
-System.out.println("汪汪…");
 }
-}
-public class Example02 {	
-public static void main(String[ ] args) {
-Dog dog = new Dog(); 
-dog.shout();    
+class MyThread extends Thread {
+public void run() {
+while (true) {   
+System.out.println("MyThread类的run()方法在运行");
+}	
 }
 }
